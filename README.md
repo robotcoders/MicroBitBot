@@ -1,6 +1,6 @@
 # mbit
 
-Extension for LAFVIN  V1.0
+Extension for Yahboom mbit V3.0.5
 
 ## License
 

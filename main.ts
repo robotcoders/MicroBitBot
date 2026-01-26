@@ -1,5 +1,6 @@
 ﻿/*
-Copyright (C): 2010-2019,
+Copyright (C): 2010-2019, Shenzhen Yahboom Tech
+modified from liusen
 load dependency
 "mbit": "file:../pxt-mbit"
 */
@@ -7,37 +8,37 @@ load dependency
 
 
 //% color="#C814B8" weight=25 icon="\uf1d4"
-namespace mbit_Show {
+namespace mbit_显示类 {
     
     export enum enColor {
 
-        //% blockId="OFF" block="Off"
+        //% blockId="OFF" block="灭"
         OFF = 0,
-        //% blockId="Red" block="Red"
+        //% blockId="Red" block="红色"
         Red,
-        //% blockId="Green" block="Green"
+        //% blockId="Green" block="绿色"
         Green,
-        //% blockId="Blue" block="Blue"
-        Blue,   
-        //% blockId="White" block="White"
+        //% blockId="Blue" block="蓝色"
+        Blue,
+        //% blockId="White" block="白色"
         White,
-        //% blockId="Cyan" block="Cyan"
+        //% blockId="Cyan" block="青色"
         Cyan,
-        //% blockId="Pinkish" block="Pinkish"
+        //% blockId="Pinkish" block="品红"
         Pinkish,
-        //% blockId="Yellow" block="Yellow"
+        //% blockId="Yellow" block="黄色"
         Yellow,
 
     }
     export enum enLED1 {
         
-        //% blockId="OFF" block="OFF"
+        //% blockId="OFF" block="灭"
         OFF = 0,
-        //% blockId="ON" block="ON"
+        //% blockId="ON" block="亮"
         ON =1
     }
 
-    //% blockId=mbit_LED1 block="LED|pin %pin|state %value"
+    //% blockId=mbit_LED1 block="LED1|pin %pin|value %value"
     //% weight=5
     //% blockGap=8
     //% color="#C814B8"
@@ -48,7 +49,7 @@ namespace mbit_Show {
 
     }
 
-    //% blockId=mbit_LED2 block="LED|pin %pin|Brightness %value"
+    //% blockId=mbit_LED2 block="LED2|pin %pin|value %value"
     //% weight=4
     //% blockGap=8
     //% color="#C814B8"
@@ -81,7 +82,7 @@ namespace mbit_Show {
 
     }
 
-    //% blockId=mbit_RGB block="RGB|PinR %pin1|PinG %pin2|PinB %pin3|Red %value1|Green %value2|Blue %value3"
+    //% blockId=mbit_RGB block="RGB|pin1 %pin1|pin2 %pin2|pin3 %pin3|value1 %value1|value2 %value2|value3 %value3"
     //% weight=2
     //% blockGap=8
     //% color="#C814B8"
@@ -94,7 +95,7 @@ namespace mbit_Show {
         pins.analogWritePin(pin3, value3 * 1024 / 256);
 
     }
-    //% blockId=mbit_RGB2 block="RGB|PinR %pin1|PinG %pin2|PinB %pin3|SHOW %value"
+    //% blockId=mbit_RGB2 block="RGB|pin1 %pin1|pin2 %pin2|pin3 %pin3|value %value"
     //% weight=1
     //% blockGap=8
     //% color="#C814B8"
@@ -160,24 +161,24 @@ namespace mbit_Show {
  ****************************************************************************************************************************************/
 
 //% color="#87CEEB" weight=24 icon="\uf1b6"
-namespace mbit_Sensors {
+namespace mbit_传感器类 {
 
     export enum enVoice {
-        //% blockId="Voice" block="ON"
+        //% blockId="Voice" block="有声音"
         Voice = 0,
-        //% blockId="NoVoice" block="OFF"
+        //% blockId="NoVoice" block="无声音"
         NoVoice = 1
     }
 
     export enum enIR {
-        //% blockId="Get" block="Detected"
+        //% blockId="Get" block="检测到"
         Get = 0,
-        //% blockId="NoVoice" block="Not detected"
+        //% blockId="NoVoice" block="未检测"
         NoGet = 1
     }
     
 
-    //% blockId=mbit_Voice_Sensor block="Voice_Sensor|pin %pin|State %value"
+    //% blockId=mbit_Voice_Sensor block="Voice_Sensor|pin %pin|value %value"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -202,7 +203,7 @@ namespace mbit_Sensors {
             control.waitMicros(13);
         }
     }
-    //% blockId=mbit_IR_Sensor block="IR_Sensor|pin %pin| |%value|Obstacles"
+    //% blockId=mbit_IR_Sensor block="IR_Sensor|pin %pin| |%value|障碍物"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -264,37 +265,37 @@ namespace mbit_Sensors {
  ****************************************************************************************************************************************/
 
 //% color="#808080" weight=23 icon="\uf11c"
-namespace mbit_input {
+namespace mbit_输入类 {
 
     export enum enRocker {
-        //% blockId="Nostate" block="Nostate"
+        //% blockId="Nostate" block="无"
         Nostate = 0,
-        //% blockId="Up" block="Up"
+        //% blockId="Up" block="上"
         Up,
-        //% blockId="Down" block="Down"
+        //% blockId="Down" block="下"
         Down,
-        //% blockId="Left" block="Left"
+        //% blockId="Left" block="左"
         Left,
-        //% blockId="Right" block="Right"
+        //% blockId="Right" block="右"
         Right,
-        //% blockId="Press" block="Press"
+        //% blockId="Press" block="按下"
         Press
     }
 
     export enum enTouch {
-        //% blockId="NoTouch" block="Not touched"
+        //% blockId="NoTouch" block="未触摸"
         NoTouch = 0,
-        //% blockId="Touch" block="Touched"
+        //% blockId="Touch" block="触摸"
         Touch = 1
     }
     export enum enButton {
-        //% blockId="Press" block="Pressed"
+        //% blockId="Press" block="按下"
         Press = 0,
-        //% blockId="Realse" block="Released"
+        //% blockId="Realse" block="松开"
         Realse = 1
     }
 
-    //% blockId=mbit_TouchPad block="TouchPad|pin %pin|State %value"
+    //% blockId=mbit_TouchPad block="TouchPad|pin %pin|value %value"
     //% weight=100
     //% blockGap=10
     //% color="#808080"
@@ -311,7 +312,7 @@ namespace mbit_input {
 
     }
     
-    //% blockId=mbit_Rocker block="Rocker|VRX %pin1|VRY %pin2|SW %pin3|State %value"
+    //% blockId=mbit_Rocker block="Rocker|VRX %pin1|VRY %pin2|SW %pin3|value %value"
     //% weight=100
     //% blockGap=10
     //% color="#808080"
@@ -354,7 +355,7 @@ namespace mbit_input {
 
     }
 
-    //% blockId=mbit_Button block="Button|pin %pin|State %value"
+    //% blockId=mbit_Button block="Button|pin %pin|value %value"
     //% weight=100
     //% blockGap=10
     //% color="#808080"
@@ -377,16 +378,16 @@ namespace mbit_input {
  ****************************************************************************************************************************************/
 
 //% color="#D2691E" weight=22 icon="\uf001"
-namespace mbit_Music {
+namespace mbit_音乐类 {
     export enum enBuzzer {
 
-        //% blockId="NoBeep" block="NoBeep"
+        //% blockId="NoBeep" block="不响"
         NoBeep = 0,
-        //% blockId="Beep" block="Beep"
+        //% blockId="Beep" block="响"
         Beep
     }
 
-    //% blockId=mbit_Buzzer block="Buzzer|pin %pin|State %value"
+    //% blockId=mbit_Buzzer block="Buzzer|pin %pin|value %value"
     //% weight=100
     //% blockGap=10 
     //% color="#D2691E"
@@ -406,7 +407,7 @@ namespace mbit_Music {
  ****************************************************************************************************************************************/
 
 //% color="#0000CD" weight=21 icon="\uf185"
-namespace mbit_Motor {
+namespace mbit_电机类 {
 
     //% blockId=mbit_Fan block="Fan|pin %pin|speed %value"
     //% weight=100
@@ -420,7 +421,7 @@ namespace mbit_Motor {
 
     }
 
-    //% blockId=mbit_Servo block="Servo|pin %pin|Angle %value"
+    //% blockId=mbit_Servo block="Servo|pin %pin|value %value"
     //% weight=100
     //% blockGap=10
     //% color="#0000CD"
@@ -433,12 +434,9 @@ namespace mbit_Motor {
     }
 
 }
-/*****************************************************************************************************************************************
- *  小车类 ***************************************************************************************************************************** 
- ****************************************************************************************************************************************/
 
 //% color="#006400" weight=20 icon="\uf1b9"
-namespace mbit_Smartcar {
+namespace mbit_小车类 {
 
     const PCA9685_ADD = 0x41
     const MODE1 = 0x00
@@ -464,21 +462,21 @@ namespace mbit_Smartcar {
 
     export enum enColor {
 
-        //% blockId="OFF" block="Off"
+        //% blockId="OFF" block="灭"
         OFF = 0,
-        //% blockId="Red" block="Red"
+        //% blockId="Red" block="红色"
         Red,
-        //% blockId="Green" block="Green"
+        //% blockId="Green" block="绿色"
         Green,
-        //% blockId="Blue" block="Blue"
-        Blue,   
-        //% blockId="White" block="White"
+        //% blockId="Blue" block="蓝色"
+        Blue,
+        //% blockId="White" block="白色"
         White,
-        //% blockId="Cyan" block="Cyan"
+        //% blockId="Cyan" block="青色"
         Cyan,
-        //% blockId="Pinkish" block="Pinkish"
+        //% blockId="Pinkish" block="品红"
         Pinkish,
-        //% blockId="Yellow" block="Yellow"
+        //% blockId="Yellow" block="黄色"
         Yellow,
 
     }
@@ -508,28 +506,24 @@ namespace mbit_Smartcar {
     }
     export enum enPos {
 
-        //% blockId="LeftState" block="LeftState"
+        //% blockId="LeftState" block="左边状态"
         LeftState = 0,
-        //% blockId="RightState" block="RightState"
+        //% blockId="RightState" block="右边状态"
         RightState = 1
     }
 
     export enum enLineState {
-        //% blockId="White" block="White"
+        //% blockId="White" block="白线"
         White = 0,
-        //% blockId="Black" block="Black"
-        Black = 1
-    }
-        White = 0,
-        //% blockId="Black" block="Black"
+        //% blockId="Black" block="黑线"
         Black = 1
 
     }
     
     export enum enAvoidState {
-        //% blockId="OBSTACLE" block="Obstacle"
+        //% blockId="OBSTACLE" block="有障碍物"
         OBSTACLE = 0,
-        //% blockId="NOOBSTACLE" block="No obstacle"
+        //% blockId="NOOBSTACLE" block="无障碍物"
         NOOBSTACLE = 1
 
     }
@@ -542,19 +536,19 @@ namespace mbit_Smartcar {
         S3
     }
     export enum CarState {
-        //% blockId="Car_Run" block="Forward"
+        //% blockId="Car_Run" block="前行"
         Car_Run = 1,
-        //% blockId="Car_Back" block="Backward"
+        //% blockId="Car_Back" block="后退"
         Car_Back = 2,
-        //% blockId="Car_Left" block="Left"
+        //% blockId="Car_Left" block="左转"
         Car_Left = 3,
-        //% blockId="Car_Right" block="Right"
+        //% blockId="Car_Right" block="右转"
         Car_Right = 4,
-        //% blockId="Car_Stop" block="Stop"
+        //% blockId="Car_Stop" block="停止"
         Car_Stop = 5,
-        //% blockId="Car_SpinLeft" block="Rotate Left"
+        //% blockId="Car_SpinLeft" block="原地左旋"
         Car_SpinLeft = 6,
-        //% blockId="Car_SpinRight" block="Rotate Right"
+        //% blockId="Car_SpinRight" block="原地右旋"
         Car_SpinRight = 7
     }
 
@@ -772,7 +766,7 @@ namespace mbit_Smartcar {
      * *****************************************************************
      * @param index
      */
-    //% blockId=mbit_RGB_Car_Big2 block="RGB_Car_Searchlights|Select Colors %value"
+    //% blockId=mbit_RGB_Car_Big2 block="RGB_Car_Big2|value %value"
     //% weight=101
     //% blockGap=10
     //% color="#C814B8"
@@ -830,7 +824,7 @@ namespace mbit_Smartcar {
             }
         }
     }
-    //% blockId=mbit_RGB_Car_Big block="RGB_Car_Searchlights|Red %value1|Green %value2|Blue %value3"
+    //% blockId=mbit_RGB_Car_Big block="RGB_Car_Big|value1 %value1|value2 %value2|value3 %value3"
     //% weight=100
     //% blockGap=10
     //% color="#C814B8"
@@ -855,7 +849,7 @@ namespace mbit_Smartcar {
 
     }
 
-    //% blockId=mbit_RGB_Car_Program block="RGB_Car_Atmospheric lighting"
+    //% blockId=mbit_RGB_Car_Program block="RGB_Car_Program"
     //% weight=99
     //% blockGap=10
     //% color="#C814B8"
@@ -923,7 +917,7 @@ namespace mbit_Smartcar {
             case enMusic.power_down: music.beginMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.Once); break;
         }
     }
-    //% blockId=mbit_Servo_Car block="Servo_Car|num %num|Angle %value"
+    //% blockId=mbit_Servo_Car block="Servo_Car|num %num|value %value"
     //% weight=96
     //% blockGap=10
     //% color="#006400"
@@ -938,7 +932,7 @@ namespace mbit_Smartcar {
 
     }
 
-    //% blockId=mbit_Avoid_Sensor block="Avoid_Sensor|State %value"
+    //% blockId=mbit_Avoid_Sensor block="Avoid_Sensor|value %value"
     //% weight=95
     //% blockGap=10
     //% color="#006400"
@@ -981,7 +975,7 @@ namespace mbit_Smartcar {
         return temp;
 
     }
-    //% blockId=mbit_Line_Sensor block="Line_Sensor|direct %direct|Detection %value"
+    //% blockId=mbit_Line_Sensor block="Line_Sensor|direct %direct|value %value"
     //% weight=94
     //% blockGap=10
     //% color="#006400"
@@ -1042,7 +1036,7 @@ namespace mbit_Smartcar {
             case CarState.Car_SpinRight: Car_spinright(255, 255); break;
         }
     }
-    //% blockId=mbit_CarCtrlSpeed block="CarCtrl|%index|speed %speed"
+    //% blockId=mbit_CarCtrlSpeed block="CarCtrlSpeed|%index|speed %speed"
     //% weight=92
     //% blockGap=10
     //% speed.min=0 speed.max=255
@@ -1059,7 +1053,7 @@ namespace mbit_Smartcar {
             case CarState.Car_SpinRight: Car_spinright(speed, speed); break;
         }
     }
-    //% blockId=mbit_CarCtrlSpeed2 block="CarCtrl|%index|Lmotor %speed1|Rmotor %speed2"
+    //% blockId=mbit_CarCtrlSpeed2 block="CarCtrlSpeed2|%index|speed1 %speed1|speed2 %speed2"
     //% weight=91
     //% blockGap=10
     //% speed1.min=0 speed1.max=255 speed2.min=0 speed2.max=255
