@@ -874,7 +874,7 @@ namespace mbit_小车类 {
     const PRESCALE = 0xFE
 
     let initialized = false
-    let yahStrip: neopixel.Strip;
+    let yahStrip: mbit_小车类.Strip;
 
     export enum enColor {
 
