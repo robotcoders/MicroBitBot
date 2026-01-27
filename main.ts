@@ -686,7 +686,8 @@ namespace mbit_小车类 {
   //% block="on IR button | %button | %action"
   //% button.fieldEditor="gridpicker"
   //% button.fieldOptions.tooltips="false"
-  //% weight=50
+  //% weight=89
+  //% color="#FFA500"
   export function onIrButton(
     button: IrButton,
     action: IrButtonAction,
