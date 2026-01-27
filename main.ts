@@ -1270,12 +1270,12 @@ namespace mbit_小车类 {
     //% blockGap=10
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function RGB_Car_Program(): neopixel.Strip {
-         
+    export function RGB_Car_Program(): mbit_小车类.Strip {
+
         if (!yahStrip) {
-            yahStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB);
+            yahStrip = mbit_小车类.create(DigitalPin.P16, 4, mbit_小车类.NeoPixelMode.RGB);
         }
-        return yahStrip;  
+        return yahStrip;
     }
 
 
