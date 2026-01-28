@@ -1,3 +1,11 @@
+
+/**
+ * Functions to operate NeoPixel strips.
+ */
+//% shim=mbit_sendBufferAsm
+function mbit_neopixel_sendBuffer(buf: Buffer, pin: DigitalPin) {
+}
+
 namespace mbit_小车类 {
     /**
      * Well known colors for a NeoPixel strip
@@ -37,12 +45,7 @@ namespace mbit_小车类 {
         RGB_RGB = 2
     }
 
-    /**
-     * Functions to operate NeoPixel strips.
-     */
-    //% shim=mbit_sendBufferAsm
-    function sendBuffer(buf: Buffer, pin: DigitalPin) {
-    }
+
 
     /**
      * A NeoPixel strip
@@ -272,7 +275,7 @@ namespace mbit_小车类 {
     //% parts="neopixel"
     //% color="#2699BF"
         show() {
-            sendBuffer(this.buf, this.pin);
+            mbit_neopixel_sendBuffer(this.buf, this.pin);
         }
 
         /**
