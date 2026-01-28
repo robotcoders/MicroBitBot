@@ -650,7 +650,8 @@ namespace mbit_小车类 {
   //% block="connect IR receiver at pin %pin"
   //% pin.fieldEditor="gridpicker"
   //% pin.fieldOptions.tooltips="false"
-  //% weight=90
+  //% weight=239
+  //% color="#FFA500"
   export function connectIrReceiver(
     pin: DigitalPin
   ): void {
@@ -686,7 +687,7 @@ namespace mbit_小车类 {
   //% block="on IR button | %button | %action"
   //% button.fieldEditor="gridpicker"
   //% button.fieldOptions.tooltips="false"
-  //% weight=89
+  //% weight=238
   //% color="#FFA500"
   export function onIrButton(
     button: IrButton,
@@ -1267,7 +1268,7 @@ namespace mbit_小车类 {
     }
 
     //% blockId=mbit_RGB_Car_Program block="RGB_Car_Program"
-    //% weight=99
+    //% weight=240
     //% blockGap=10
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -1282,7 +1283,7 @@ namespace mbit_小车类 {
 
 	//% blockId=mbit_ultrasonic_car block="ultrasonic return distance(cm)"
     //% color="#006400"
-    //% weight=98
+    //% weight=250
     //% blockGap=10
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Ultrasonic_Car(): number {
@@ -1306,7 +1307,7 @@ namespace mbit_小车类 {
     }
 
     //% blockId=mbit_Music_Car block="Music_Car|%index"
-    //% weight=97
+    //% weight=244
     //% blockGap=10
     //% color="#006400"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -1335,7 +1336,7 @@ namespace mbit_小车类 {
         }
     }
     //% blockId=mbit_Servo_Car block="Servo_Car|num %num|value %value"
-    //% weight=96
+    //% weight=243
     //% blockGap=10
     //% color="#006400"
     //% num.min=1 num.max=3 value.min=0 value.max=180
@@ -1350,7 +1351,7 @@ namespace mbit_小车类 {
     }
 
     //% blockId=mbit_Avoid_Sensor block="Avoid_Sensor|value %value"
-    //% weight=95
+    //% weight=245
     //% blockGap=10
     //% color="#006400"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12
@@ -1393,7 +1394,7 @@ namespace mbit_小车类 {
 
     }
     //% blockId=mbit_Line_Sensor block="Line_Sensor|direct %direct|value %value"
-    //% weight=94
+    //% weight=246
     //% blockGap=10
     //% color="#006400"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12
@@ -1438,7 +1439,7 @@ namespace mbit_小车类 {
 
     }
     //% blockId=mbit_CarCtrl block="CarCtrl|%index"
-    //% weight=93
+    //% weight=249
     //% blockGap=10
     //% color="#006400"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=10
@@ -1454,7 +1455,7 @@ namespace mbit_小车类 {
         }
     }
     //% blockId=mbit_CarCtrlSpeed block="CarCtrlSpeed|%index|speed %speed"
-    //% weight=92
+    //% weight=248
     //% blockGap=10
     //% speed.min=0 speed.max=255
     //% color="#006400"
@@ -1471,7 +1472,7 @@ namespace mbit_小车类 {
         }
     }
     //% blockId=mbit_CarCtrlSpeed2 block="CarCtrlSpeed2|%index|speed1 %speed1|speed2 %speed2"
-    //% weight=91
+    //% weight=247
     //% blockGap=10
     //% speed1.min=0 speed1.max=255 speed2.min=0 speed2.max=255
     //% color="#006400"

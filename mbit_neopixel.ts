@@ -64,9 +64,9 @@ namespace mbit_小车类 {
          * @param rgb RGB color of the LED
          */
         //% blockId="mbit_neopixel_set_strip_color" block="%strip|show color %rgb=mbit_neopixel_colors" 
-        //% weight=85 blockGap=8
-        //% parts="neopixel"
-        //% color="#2699BF"
+    //% weight=225 blockGap=8
+    //% parts="neopixel"
+    //% color="#2699BF"
         showColor(rgb: number) {
             rgb = rgb >> 0;
             this.setAllRGB(rgb);
@@ -79,9 +79,9 @@ namespace mbit_小车类 {
          * @param endHue the end hue value for the rainbow, eg: 360
          */
         //% blockId="mbit_neopixel_set_strip_rainbow" block="%strip|show rainbow from %startHue|to %endHue" 
-        //% weight=85 blockGap=8
-        //% parts="neopixel"
-        //% color="#2699BF"
+    //% weight=224 blockGap=8
+    //% parts="neopixel"
+    //% color="#2699BF"
         showRainbow(startHue: number = 1, endHue: number = 360) {
             if (this._length <= 0) return;
 
@@ -145,10 +145,10 @@ namespace mbit_小车类 {
          * @param value current value to plot
          * @param high maximum value, eg: 255
          */
-        //% weight=84
-        //% blockId=mbit_neopixel_show_bar_graph block="%strip|show bar graph of %value|up to %high" 
-        //% icon="\uf080"
-        //% parts="neopixel"
+        //% weight=223
+    //% blockId=mbit_neopixel_show_bar_graph block="%strip|show bar graph of %value|up to %high" 
+    //% icon="\uf080"
+    //% parts="neopixel"
         //% color="#2699BF"
         showBarGraph(value: number, high: number): void {
             if (high <= 0) {
@@ -185,10 +185,10 @@ namespace mbit_小车类 {
          * @param rgb RGB color of the LED
          */
         //% blockId="mbit_neopixel_set_pixel_color" block="%strip|set pixel color at %pixeloffset|to %rgb=mbit_neopixel_colors" 
-        //% blockGap=8
-        //% weight=80
-        //% parts="neopixel" advanced=true
-        //% color="#2699BF"
+    //% blockGap=8
+    //% weight=220
+    //% parts="neopixel" advanced=true
+    //% color="#2699BF"
         setPixelColor(pixeloffset: number, rgb: number): void {
             this.setPixelRGB(pixeloffset >> 0, rgb >> 0);
         }
@@ -200,10 +200,10 @@ namespace mbit_小车类 {
          * @param chain type of matrix
          */
         //% blockId=mbit_neopixel_set_matrix_width block="%strip|set matrix width %width|rotation %rotation|chain %chain"
-        //% blockGap=8
-        //% weight=5
-        //% parts="neopixel" advanced=true
-        //% color="#2699BF"
+    //% blockGap=8
+    //% weight=200
+    //% parts="neopixel" advanced=true
+    //% color="#2699BF"
         setMatrixWidth(width: number, rotation: number, chain: number) {
             this._matrixWidth = Math.min(this._length, width >> 0);
             this._matrixRotation = rotation >> 0;
@@ -218,7 +218,7 @@ namespace mbit_小车类 {
          * @param rgb RGB color of the LED
          */
         //% blockId="mbit_neopixel_set_matrix_color" block="%strip|set matrix color at x %x|y %y|to %rgb=mbit_neopixel_colors" 
-        //% weight=4
+        //% weight=193
         //% parts="neopixel" advanced=true
         //% color="#2699BF"
         setMatrixColor(x: number, y: number, rgb: number) {
@@ -253,10 +253,10 @@ namespace mbit_小车类 {
          * @param white brightness of the white LED
          */
         //% blockId="mbit_neopixel_set_pixel_white" block="%strip|set pixel white LED at %pixeloffset|to %white" 
-        //% blockGap=8
-        //% weight=80
-        //% parts="neopixel" advanced=true
-        //% color="#2699BF"
+    //% blockGap=8
+    //% weight=219
+    //% parts="neopixel" advanced=true
+    //% color="#2699BF"
         setPixelWhiteLED(pixeloffset: number, white: number): void {
             if (this._mode === NeoPixelMode.RGBW) {
                 this.setPixelW(pixeloffset >> 0, white >> 0);
@@ -268,9 +268,9 @@ namespace mbit_小车类 {
          * Send all the changes to the strip.
          */
         //% blockId="mbit_neopixel_show" block="%strip|show" blockGap=8
-        //% weight=79
-        //% parts="neopixel"
-        //% color="#2699BF"
+    //% weight=218
+    //% parts="neopixel"
+    //% color="#2699BF"
         show() {
             sendBuffer(this.buf, this.pin);
         }
@@ -280,9 +280,9 @@ namespace mbit_小车类 {
          * You need to call ``show`` to make the changes visible.
          */
         //% blockId="mbit_neopixel_clear" block="%strip|clear"
-        //% weight=76
-        //% parts="neopixel"
-        //% color="#2699BF"
+    //% weight=217
+    //% parts="neopixel"
+    //% color="#2699BF"
         clear(): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
             this.buf.fill(0, this.start * stride, this._length * stride);
@@ -292,8 +292,8 @@ namespace mbit_小车类 {
          * Gets the number of pixels declared on the strip
          */
         //% blockId="mbit_neopixel_length" block="%strip|length" blockGap=8
-        //% weight=60 advanced=true
-        //% color="#2699BF"
+    //% weight=210 advanced=true
+    //% color="#2699BF"
         length() {
             return this._length;
         }
@@ -303,9 +303,9 @@ namespace mbit_小车类 {
          * @param brightness a measure of LED brightness in 0-255. eg: 255
          */
         //% blockId="mbit_neopixel_set_brightness" block="%strip|set brightness %brightness" blockGap=8
-        //% weight=59
-        //% parts="neopixel" advanced=true
-        //% color="#2699BF"
+    //% weight=209
+    //% parts="neopixel" advanced=true
+    //% color="#2699BF"
         setBrightness(brightness: number): void {
             this.brightness = brightness & 0xff;
         }
@@ -314,9 +314,9 @@ namespace mbit_小车类 {
          * Apply brightness to current colors using a quadratic easing function.
          **/
         //% blockId="mbit_neopixel_each_brightness" block="%strip|ease brightness" blockGap=8
-        //% weight=58
-        //% parts="neopixel" advanced=true
-        //% color="#2699BF"
+    //% weight=208
+    //% parts="neopixel" advanced=true
+    //% color="#2699BF"
         easeBrightness(): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
             const br = this.brightness;
@@ -344,10 +344,10 @@ namespace mbit_小车类 {
          * @param start offset in the LED strip to start the range
          * @param length number of LEDs in the range. eg: 4
          */
-        //% weight=89
-        //% blockId="mbit_neopixel_range" block="%strip|range from %start|with %length|leds"
-        //% parts="neopixel"
-        //% blockSetVariable=range
+        //% weight=228
+    //% blockId="mbit_neopixel_range" block="%strip|range from %start|with %length|leds"
+    //% parts="neopixel"
+    //% blockSetVariable=range
         //% color="#2699BF"
         range(start: number, length: number): Strip {
             start = start >> 0;
@@ -369,9 +369,9 @@ namespace mbit_小车类 {
          * @param offset number of pixels to shift forward, eg: 1
          */
         //% blockId="mbit_neopixel_shift" block="%strip|shift pixels by %offset" blockGap=8
-        //% weight=40
-        //% parts="neopixel"
-        //% color="#2699BF"
+    //% weight=205
+    //% parts="neopixel"
+    //% color="#2699BF"
         shift(offset: number = 1): void {
             offset = offset >> 0;
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
@@ -384,9 +384,9 @@ namespace mbit_小车类 {
          * @param offset number of pixels to rotate forward, eg: 1
          */
         //% blockId="mbit_neopixel_rotate" block="%strip|rotate pixels by %offset" blockGap=8
-        //% weight=39
-        //% parts="neopixel"
-        //% color="#2699BF"
+    //% weight=204
+    //% parts="neopixel"
+    //% color="#2699BF"
         rotate(offset: number = 1): void {
             offset = offset >> 0;
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
@@ -396,9 +396,9 @@ namespace mbit_小车类 {
         /**
          * Set the pin where the neopixel is connected, defaults to P0.
          */
-        //% weight=10
-        //% parts="neopixel" advanced=true
-        //% color="#2699BF"
+        //% weight=202
+    //% parts="neopixel" advanced=true
+    //% color="#2699BF"
         setPin(pin: DigitalPin): void {
             this.pin = pin;
             pins.digitalWritePin(this.pin, 0);
@@ -408,7 +408,7 @@ namespace mbit_小车类 {
         /**
          * Estimates the electrical current (mA) consumed by the current light configuration.
          */
-        //% weight=9 blockId=mbit_neopixel_power block="%strip|power (mA)"
+        //% weight=190 blockId=mbit_neopixel_power block="%strip|power (mA)"
         //% advanced=true
         //% color="#2699BF"
         power(): number {
@@ -513,7 +513,7 @@ namespace mbit_小车类 {
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      */
     //% blockId="mbit_neopixel_create" block="NeoPixel at pin %pin|with %numleds|leds as %mode"
-    //% weight=90 blockGap=8
+    //% weight=229 blockGap=8
     //% parts="neopixel"
     //% trackArgs=0,2
     //% blockSetVariable=strip
@@ -537,7 +537,7 @@ namespace mbit_小车类 {
      * @param green value of the green channel between 0 and 255. eg: 255
      * @param blue value of the blue channel between 0 and 255. eg: 255
      */
-    //% weight=1
+    //% weight=191
     //% blockId="mbit_neopixel_rgb" block="red %red|green %green|blue %blue"
     //% advanced=true
     //% color="#2699BF"
