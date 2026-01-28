@@ -1271,7 +1271,7 @@ namespace mbit_小车类 {
     //% weight=230
     //% blockGap=10
     //% color="#2699BF"
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
+    //% blockSetVariable=strip
     export function RGB_Car_Program(): mbit_小车类.Strip {
 
         if (!yahStrip) {
