@@ -2,10 +2,8 @@
 /**
  * Functions to operate NeoPixel strips.
  */
-namespace mbit {
-    //% shim=mbit::sendBufferAsm
-    export function sendBufferAsm(buf: Buffer, pin: DigitalPin) {
-    }
+//% shim=mbit_sendBufferAsm
+function mbit_neopixel_sendBuffer(buf: Buffer, pin: DigitalPin) {
 }
 
 namespace mbit_小车类 {
@@ -277,7 +275,11 @@ namespace mbit_小车类 {
     //% parts="neopixel"
     //% color="#2699BF"
         show() {
-            mbit.sendBufferAsm(this.buf, this.pin);
+            // fix: simulator crash
+            try {
+                mbit_neopixel_sendBuffer(this.buf, this.pin);
+            } catch (e) {
+            }
         }
 
         /**
