@@ -1185,7 +1185,7 @@ namespace mbit_小车类 {
      * @param index
      */
     //% blockId=mbit_RGB_Car_Big2 block="RGB_Car_Big2|value %value"
-    //% weight=101
+    //% weight=242
     //% blockGap=10
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -1268,9 +1268,9 @@ namespace mbit_小车类 {
     }
 
     //% blockId=mbit_RGB_Car_Program block="RGB_Car_Program"
-    //% weight=240
+    //% weight=230
     //% blockGap=10
-    //% color="#C814B8"
+    //% color="#2699BF"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function RGB_Car_Program(): mbit_小车类.Strip {
 
