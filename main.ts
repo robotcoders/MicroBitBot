@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
 Copyright (C): 2010-2019, Shenzhen Yahboom Tech
 modified from liusen
 load dependency
@@ -1267,11 +1267,11 @@ namespace mbit_小车类 {
 
     }
 
-    //% blockId=mbit_RGB_Car_Program block="Built-in 4 leds WS2812 strip"
+    //% blockId=mbit_RGB_Car_Program block="RGB_Car_Program"
     //% weight=230
     //% blockGap=10
     //% color="#2699BF"
-    //% blockSetVariable=strip
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function RGB_Car_Program(): mbit_小车类.Strip {
 
         if (!yahStrip) {
@@ -1338,7 +1338,7 @@ namespace mbit_小车类 {
     //% blockId=mbit_Servo_Car block="Servo_Car|num %num|value %value"
     //% weight=243
     //% blockGap=10
-    //% color="#e61a1aff"
+    //% color="#006400"
     //% num.min=1 num.max=3 value.min=0 value.max=180
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=9
     export function Servo_Car(num: enServo, value: number): void {
