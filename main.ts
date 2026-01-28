@@ -1,4 +1,4 @@
-﻿﻿/*
+﻿﻿﻿/*
 Copyright (C): 2010-2019, Shenzhen Yahboom Tech
 modified from liusen
 load dependency
@@ -1267,7 +1267,7 @@ namespace mbit_小车类 {
 
     }
 
-    //% blockId=mbit_RGB_Car_Program block="RGB_Car_Program"
+    //% blockId=mbit_RGB_Car_Program block="Car 4 leds WS2812 strip"
     //% weight=230
     //% blockGap=10
     //% color="#2699BF"
